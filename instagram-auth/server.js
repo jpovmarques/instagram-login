@@ -1,9 +1,9 @@
-var express = require('express');
-var app = express();
-var morgan = require('morgan');
-var mongoose = require('mongoose');
+const express = require('express');
+const morgan = require('morgan');
+const mongoose = require('mongoose');
+const config = require('./config/config');
 
-var config = require('./config/config');
+const app = express();
 
 mongoose.connect(config.db.uri);
 
@@ -11,7 +11,7 @@ app.use(morgan('dev'));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function (request, response) {
-	response.sendfile('./public/index.html')
+	response.sendfile('./public/index.html');
 });
 
 app.get('/auth', function (request, response) {
