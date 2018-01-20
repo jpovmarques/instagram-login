@@ -1,0 +1,16 @@
+{
+  "name": "instagram-auth",
+  "version": "1.0.0",
+  "main": "server.js",
+  "author": "João Marques",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.1",
+    "morgan": "^1.9.0"
+  }
+}
