@@ -19,6 +19,7 @@ module.exports = {
     client_id: in_client_id,
     client_secret: in_client_secret,
     auth_login_url: in_auth_url,
-    auth_logout_url: out_auth_url
+    auth_logout_url: out_auth_url,
+    redirect_uri: in_redirect_uri
   }
 };

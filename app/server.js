@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const config = require('./config/config');
+const authUser = require('./services/userService')
 
 const app = express();
 const path = __dirname + '/public';
@@ -15,10 +16,7 @@ app.get('/', function (request, response) {
 	response.sendFile(path + '/index.html');
 });
 
-app.get('/auth', function (request, response) {
-	console.log('Welcome, your token is ' + request.query.code);
-	response.sendFile(path + '/index.html');
-});
+app.get('/auth', authUser);
 
 app.get('/login', function (request, response) {
 	response.redirect(config.instagram.auth_login_url);

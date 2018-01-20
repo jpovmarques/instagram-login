@@ -1,5 +1,5 @@
 {
-  "name": "instagram-auth",
+  "name": "app",
   "version": "1.0.0",
   "main": "server.js",
   "author": "João Marques",
@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "mongoose": "^5.0.1",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "request": "^2.83.0"
   }
 }
