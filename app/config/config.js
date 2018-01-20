@@ -1,5 +1,5 @@
-const in_client_id = '4d41be911d184d06ada82fa674929787',
-    in_client_secret = '79d5217f07264e318ec63782482427aa',
+const in_client_id = '',
+    in_client_secret = '',
     in_redirect_uri = 'http://localhost:3000/auth',
     in_auth_url = 'https://api.instagram.com/oauth/authorize/?client_id='
                   + in_client_id + '&redirect_uri='
