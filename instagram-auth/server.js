@@ -4,19 +4,20 @@ const mongoose = require('mongoose');
 const config = require('./config/config');
 
 const app = express();
+const path = __dirname + '/public';
 
 mongoose.connect(config.db.uri);
 
-/*app.use(morgan('dev'));
-*/app.use(express.static(__dirname + '/public'));
+app.use(morgan('dev'));
+app.use(express.static(path));
 
 app.get('/', function (request, response) {
-	response.sendfile('./public/index.html');
+	response.sendFile(path + '/index.html');
 });
 
 app.get('/auth', function (request, response) {
 	console.log('Welcome, your token is ' + request.query.code);
-	response.sendfile('./public/index.html');
+	response.sendFile(path + '/index.html');
 });
 
 app.get('/login', function (request, response) {
