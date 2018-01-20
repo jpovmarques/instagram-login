@@ -1,9 +1,10 @@
-const in_client_id = 'CLIENT_ID',
-    in_client_secret = 'CLIENT_SECRET',
+const in_client_id = '4d41be911d184d06ada82fa674929787',
+    in_client_secret = '79d5217f07264e318ec63782482427aa',
     in_redirect_uri = 'http://localhost:3000/auth',
     in_auth_url = 'https://api.instagram.com/oauth/authorize/?client_id='
                   + in_client_id + '&redirect_uri='
                   + in_redirect_uri + '&response_type=code';
+    out_auth_url = 'https://api.instagram.com/accounts/logout';
 
 const db_ip = 'localhost',
     db_connection_name = '/test',
@@ -17,6 +18,7 @@ module.exports = {
   instagram: {
     client_id: in_client_id,
     client_secret: in_client_secret,
-    auth_url: in_auth_url
+    auth_login_url: in_auth_url,
+    auth_logout_url: out_auth_url
   }
 };
