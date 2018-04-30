@@ -1,2 +1,2 @@
-# social-geo-activity
-Find people by their instagram activity.
+# instagram-login
+Instagram authentication login example.
